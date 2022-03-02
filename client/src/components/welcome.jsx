@@ -16,14 +16,15 @@ const Welcome =() =>{
         />
     );
     
+    const handleSUBMIT = ()=>{};
     const connectWallet =()=>{
 
     }
 
     return(
         <div className="flex w-full justify-between items-center">
-            <div className="flex md:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
-                <div className="flex flex-1 justify-start flex-col md:mr-10">
+            <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
+                <div className="flex flex-1 justify-start flex-col mf:mr-10">
                     <h1 className=" text-white text-3xl sm:text-5xl text-gradient py-1">Send Crypto <br /> All Across the world</h1>
                     <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
                       Explore the world of Crypto with Me <br/> Buy and Sell Crypto Anytime, Anywhere 
@@ -68,6 +69,10 @@ const Welcome =() =>{
                     <Input type="text" placeholder="Keyword (GIF)" name="keyword" handleChange={()=>{}}/>
                     <Input type="number" placeholder="Amount (ETH) " name="amount" handleChange={()=>{}}/>
                     <Input type="text" placeholder="Message" name="message" handleChange={()=>{}}/>
+                <div className="h-[1px] w-full bg-gray-400 my-2" />
+                {true ? (
+                    <Loader/>
+                ):(<button type="button" className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer" onClick={handleSUBMIT}>Send Now</button>)}
                 </div>
                 </div>
             </div>
